@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help/Manual/Demo Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Help/Manual/Demo Page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#section1">Section 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section2">Section 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section3">Section 3</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <h1 id="section1">Section 1</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum sapien ac nibh aliquet dictum. Mauris eu nunc vel dui consequat tincidunt id ac ex. Donec ultricies eu felis ut finibus. Sed vulputate justo eu finibus rutrum.</p>
+
+    <h1 id="section2">Section 2</h1>
+    <p>Quisque finibus, turpis at euismod rhoncus, velit tellus condimentum nisl, eu finibus ligula dolor sed velit. Curabitur fringilla sagittis magna, id iaculis lorem bibendum nec. Sed non ipsum sed nulla faucibus consectetur nec in mauris.</p>
+
+    <h1 id="section3">Section 3</h1>
+    <p>In vel elit vitae ligula gravida pellentesque. Sed iaculis ligula sed efficitur tincidunt. Phasellus et lobortis neque, vel aliquet ipsum. Fusce eleifend lectus vitae elit consectetur, id dignissim justo consectetur.</p>
+  </div>
+
+  <script>
+    // Smooth scrolling on click
+    $(document).ready(function() {
+      $('a.nav-link').on('click', function(event) {
+        if (this.hash !== '') {
+          event.preventDefault();
+
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function() {
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
