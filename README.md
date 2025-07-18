@@ -21,6 +21,7 @@ Features
 **Comprehensive Footer:** The footer includes detailed contact information (phone, email, address), a company description, and links to social media profiles.
 
 **Technologies Used**
+
 HTML5
 
 CSS3
